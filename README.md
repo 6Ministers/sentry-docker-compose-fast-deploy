@@ -49,8 +49,7 @@ git checkout 23.12.1
 
 Скачайте `Caddyfile`
 ``` bash
-ttps://raw.githubusercontent.com/user/repository/branch/filename
-
+wget https://raw.githubusercontent.com/6Ministers/sentry-docker-compose-fast-deploy/master/Caddyfile
 ```
 
 In the configuration file `Caddyfile`, set the following parameters. 
