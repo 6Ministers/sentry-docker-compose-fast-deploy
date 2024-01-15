@@ -1,4 +1,7 @@
-# Installing Sentry with docker-compose.
+
+![Screenshot_110](https://github.com/6Ministers/sentry-docker-compose-fast-deploy/assets/11208423/44cfcfca-4d75-47a8-b514-1c9a1151d0bc)
+
+# Installing Sentry with docker-compose and SSL.
 
 ## Quick Installation
 
@@ -108,7 +111,6 @@ Run the script
 ./install.sh --skip-user-prompt --no-report-self-hosted-issues
 ```
 
-
 Flags:
 
 `--skip-user-prompt` — skip the user creation request (let's create it with a separate command, it will be easier this way).
@@ -127,14 +129,21 @@ docker-compose up -d
 docker-compose up -d
 ```
 
-
-Создадим пользователя
+Let's create a user
 
 ``` bash
 docker-compose run --rm web createuser
 ```
 
 Then open `https://your-domain.com` to access Sentry
+
+![Screenshot_108](https://github.com/6Ministers/sentry-docker-compose-fast-deploy/assets/11208423/fda75fb3-158c-44ab-9bb2-4c6281eadcf9)
+
+and
+
+![Screenshot_107](https://github.com/6Ministers/sentry-docker-compose-fast-deploy/assets/11208423/dd77fea0-f505-4363-836b-454188dd2a5a)
+
+
 
 ## Sentry container management
 
