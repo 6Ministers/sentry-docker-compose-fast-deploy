@@ -43,6 +43,9 @@ cd self-hosted
 ```
 
 Execute the command
+
+(Проверьте последню версию в репозитории https://github.com/getsentry/self-hostedhttps://github.com/getsentry/self-hosted
+)
 ``` bash
 git checkout 23.12.1
 ```
