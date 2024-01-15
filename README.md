@@ -44,7 +44,7 @@ cd self-hosted
 
 Execute the command
 
-(Проверьте последню версию в репозитории 
+(Check the latest version in the repository
 
 https://github.com/getsentry/self-hostedhttps://github.com/getsentry/self-hosted
 )
@@ -52,7 +52,7 @@ https://github.com/getsentry/self-hostedhttps://github.com/getsentry/self-hosted
 git checkout 23.12.1
 ```
 
-Скачайте `Caddyfile`
+Download `Caddyfile`
 ``` bash
 wget https://raw.githubusercontent.com/6Ministers/sentry-docker-compose-fast-deploy/master/Caddyfile
 ```
@@ -65,6 +65,7 @@ https://your-domain.com
 ``` bash
 https://your-domain.com:443 {
     reverse_proxy 127.0.0.1:9000
+    # tls admin@example.org
 	encode zstd gzip
 	file_server
 	
@@ -108,18 +109,17 @@ Run the script
 ```
 
 
-Флаги:
+Flags:
 
-`--skip-user-prompt` — пропустить запрос создания пользователя (создадим его отдельной командой, так будет проще).
-`--no-report-self-hosted-issues` — пропустить запрос для анонимной отправки данных разработчикам Sentry с вашего хоста (помогает разработчикам улучшать продукт, но немного отъедает ресурсов; решите для себя, нужно ли вам это).
-Начинается процесс проверки соответствия требованиям и скачивание необходимых образов (docker pull).
+`--skip-user-prompt` — skip the user creation request (let's create it with a separate command, it will be easier this way).
+`--no-report-self-hosted-issues` — skip the request to anonymously send data to Sentry developers from your host (helps developers improve the product, but consumes resources a little; decide for yourself if you need it).
+The process of verifying compliance with the requirements and downloading the necessary images begins (docker pull).
 
-После будет выведено сообщение, что можно запустить Sentry
+After that, a message will be displayed that you can run Sentry
 ``` bash
 You're all done! Run the following command to get Sentry running:
 docker-compose up -d
 ```
-
 
 **Run Sentry:**
 
@@ -166,3 +166,5 @@ docker-compose down
 https://github.com/getsentry/self-hosted
 
 https://timeweb.cloud/tutorials/servers/sentry-monitoring-i-otslezhivanie-oshibok
+
+https://sentry.io/welcome/
